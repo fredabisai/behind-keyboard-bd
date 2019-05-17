@@ -47,3 +47,5 @@ Route::get('admin/{id}','Api\AdminController@getById');
 Route::get('admins','Api\AdminController@getEmployees');
 Route::post('admin/email_exists','Api\AdminController@checkEmailExists');
 Route::post('admin/phone_exists','Api\AdminController@checkPhoneExists');
+
+Route::post('question/add','Api\QuestionController@add');

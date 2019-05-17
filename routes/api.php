@@ -26,7 +26,7 @@ Route::post('user/register','Api\UserController@register');
 Route::put('user/update/{id}','Api\UserController@update');
 Route::delete('user/delete/{id}','Api\UserController@delete');
 Route::get('user/{id}','Api\UserController@getById');
-Route::get('users','Api\UserController@getEmployees');
+Route::get('users','Api\UserController@index');
 Route::post('user/email_exists','Api\UserController@checkEmailExists');
 Route::post('user/phone_exists','Api\UserController@checkPhoneExists');
 

@@ -51,7 +51,7 @@ class ExpertController extends Controller
                 $expert->first_name = $request->input('first_name');
                 $expert->last_name = $request->input('last_name');
                 $expert->email = $request->input('email');
-                $expert->phone_number = $request->input('phone_number');
+                // $expert->phone_number = $request->input('phone_number');
                 $expert->gender = $request->input('gender');
 
                 $expert->password = bcrypt($request->input('password'));
@@ -69,7 +69,7 @@ class ExpertController extends Controller
                     'first_name'=>'required',
                     'last_name'=>'required',
                     'email'=>'required|email|unique:Experts',
-                    'phone_number'=>'required|size:13|unique:Experts',
+                 
                     'gender'=>'required',
                 ];
 

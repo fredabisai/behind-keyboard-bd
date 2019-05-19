@@ -51,3 +51,8 @@ Route::post('admin/phone_exists','API\AdminController@checkPhoneExists');
 Route::post('question/add','API\QuestionController@add');
 Route::get('questions','API\QuestionController@index');
 Route::get('question/{id}','API\QuestionController@getById');
+
+
+Route::post('answer/add','API\AnswerController@add');
+Route::get('answers','API\AnswerController@index');
+Route::get('answer/{id}','API\AnswerController@getById');

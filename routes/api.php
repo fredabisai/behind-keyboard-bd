@@ -14,38 +14,40 @@ header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
 |
 | Here is where you can register API routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
+| is assigned the "API" middleware group. Enjoy building your API!
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth:API')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('user/login','Api\UserController@login');
-Route::post('user/register','Api\UserController@register');
-Route::put('user/update/{id}','Api\UserController@update');
-Route::delete('user/delete/{id}','Api\UserController@delete');
-Route::get('user/{id}','Api\UserController@getById');
-Route::get('users','Api\UserController@index');
-Route::post('user/email_exists','Api\UserController@checkEmailExists');
-Route::post('user/phone_exists','Api\UserController@checkPhoneExists');
+Route::post('user/login','API\UserController@login');
+Route::post('user/register','API\UserController@register');
+Route::put('user/update/{id}','API\UserController@update');
+Route::delete('user/delete/{id}','API\UserController@delete');
+Route::get('user/{id}','API\UserController@getById');
+Route::get('users','API\UserController@index');
+Route::post('user/email_exists','API\UserController@checkEmailExists');
+Route::post('user/phone_exists','API\UserController@checkPhoneExists');
 
-Route::post('expert/login','Api\ExpertController@login');
-Route::post('expert/register','Api\ExpertController@register');
-Route::put('employee/update/{id}','Api\ExpertController@update');
-Route::delete('expert/delete/{id}','Api\ExpertController@delete');
-Route::get('expert/{id}','Api\ExpertController@getById');
-Route::get('experts','Api\ExpertController@getEmployees');
-Route::post('expert/email_exists','Api\ExpertController@checkEmailExists');
-Route::post('expert/phone_exists','Api\ExpertController@checkPhoneExists');
+Route::post('expert/login','API\ExpertController@login');
+Route::post('expert/register','API\ExpertController@register');
+Route::put('employee/update/{id}','API\ExpertController@update');
+Route::delete('expert/delete/{id}','API\ExpertController@delete');
+Route::get('expert/{id}','API\ExpertController@getById');
+Route::get('experts','API\ExpertController@getEmployees');
+Route::post('expert/email_exists','API\ExpertController@checkEmailExists');
+Route::post('expert/phone_exists','API\ExpertController@checkPhoneExists');
 
-Route::post('admin/login','Api\AdminController@login');
-Route::post('admin/register','Api\AdminController@register');
-Route::put('employee/update/{id}','Api\AdminController@update');
-Route::delete('admin/delete/{id}','Api\AdminController@delete');
-Route::get('admin/{id}','Api\AdminController@getById');
-Route::get('admins','Api\AdminController@getEmployees');
-Route::post('admin/email_exists','Api\AdminController@checkEmailExists');
-Route::post('admin/phone_exists','Api\AdminController@checkPhoneExists');
+Route::post('admin/login','API\AdminController@login');
+Route::post('admin/register','API\AdminController@register');
+Route::put('employee/update/{id}','API\AdminController@update');
+Route::delete('admin/delete/{id}','API\AdminController@delete');
+Route::get('admin/{id}','API\AdminController@getById');
+Route::get('admins','API\AdminController@getEmployees');
+Route::post('admin/email_exists','API\AdminController@checkEmailExists');
+Route::post('admin/phone_exists','API\AdminController@checkPhoneExists');
 
-Route::post('question/add','Api\QuestionController@add');
+Route::post('question/add','API\QuestionController@add');
+Route::get('questions','API\QuestionController@index');
+Route::get('question/{id}','API\QuestionController@getById');
